@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}My Accounts{% endblock %} {% block content %}
+<form method="POST">
+    <h3 align="center">Withdraw</h3>
+    <div class="form-group">
+      <label for="withdraw">Withdraw Amount</label>
+      <input
+        type="text"
+        class="form-control"
+        id="withdraw"
+        name="withdraw"
+        placeholder="Withdrawal Amount"
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Withdraw</button>
+  </form>
+{% endblock %}

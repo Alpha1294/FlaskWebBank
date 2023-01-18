@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}Transfers{% endblock %} {% block content %}
+<form method="POST">
+    <h3 align="center">Make a transaction</h3>
+    <div class = "form-group">
+        <label for ="your_iban">Your account's Iban</label>
+        <input type="text" class="form-control" id="your_iban" name="your_iban" placeholder="Your IBAN">
+    </div>
+    <div class = "form-group">
+        <label for ="destinatary_iban">Destinatary Iban</label>
+        <input type="text" class="form-control" id="destinatary_iban" name="destinatary_iban" placeholder="Destinatary IBAN">
+    </div>
+    <div class = "form-group">
+        <label for ="cash">$ Amount</label>
+        <input type="text" class="form-control" id="cash" name="cash" placeholder="$ Amount">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Make transaction</button>
+</form>
+
+{% endblock %}

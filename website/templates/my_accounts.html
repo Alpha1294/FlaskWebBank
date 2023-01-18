@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}My Accounts{% endblock %} {% block content %}
+
+<form method="POST">
+    <h3 align="center">Add new account</h3>
+    <div class = "form-group">
+        <label for ="iban">IBAN</label>
+        <input type="text" class="form-control" id="iban" name="iban" placeholder="IBAN">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Add Account</button>
+</form>
+
+<h1 align="center">Accounts</h1>
+<ul class="list-group list-group-flush" id="accounts">
+  {% for account in user.accounts %}
+  <li class="list-group-item">{{ account.iban }}
+    <button type="button" class="close" onClick="deleteAccount({{ account.id }})">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <a href="{{ url_for('views.deposit_cash', id = account.id)}}" >Deposit Cash</a>
+    <a href="{{ url_for('views.withdraw_cash', id = account.id)}}" >Withdraw Cash</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

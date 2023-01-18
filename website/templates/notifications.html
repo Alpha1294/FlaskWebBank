@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}My Accounts{% endblock %} {% block content %}
+
+<h3 align="center">Notifications</h3>
+
+<ul class="list-group list-group-flush" id="notifications">
+    {% for note in user.notifications[::-1] %}
+    <li class="list-group-item">
+      {{ note.data }}
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

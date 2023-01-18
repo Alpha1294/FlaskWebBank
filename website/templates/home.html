@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+<nav bar class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id ="navbar">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" id="my_accounts" href="/my_accounts">My accounts</a>
+            <a class="nav-item nav-link" id="transfers" href="/transfers">Transfers</a>
+            <a class="nav-item nav-link" id="my_profile" href="/my_profile">My profile</a>
+            <a class="nav-item nav-link" id="notifications" href="/notifications">Notifications</a>
+            <a class="nav-item nav-link" id="transaction_history" href="/transaction_history">Transactions history</a>
+        </div>
+    </div>
+</nav>
+
+{% endblock %}
