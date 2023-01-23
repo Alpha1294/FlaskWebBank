@@ -32,7 +32,6 @@ def my_accounts():
             flash("Account added correctly", category="succes")
         except:
             flash("Your IBAN is invalid", category="error")
-            
 
     return render_template("my_accounts.html", user=current_user)
 
