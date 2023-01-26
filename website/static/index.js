@@ -6,3 +6,5 @@ function deleteAccount(accountId) {
       window.location.href = "/my_accounts";
     });
   }
+
+  

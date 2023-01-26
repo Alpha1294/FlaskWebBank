@@ -15,6 +15,11 @@ def home():
     return render_template("home.html", user=current_user)
 
 
+@views.route("/index")
+def landing_page():
+    return render_template("/index.html", user=current_user)
+
+
 @views.route("/my_accounts", methods=["GET", "POST"])
 @login_required
 def my_accounts():
